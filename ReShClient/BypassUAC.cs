@@ -1,4 +1,10 @@
-﻿using System;
+﻿// ----------------------------------------------------------------------
+// Original Source: https://github.com/0xlane/BypassUAC/blob/master/BypassUAC_csharp/Program.cs
+// Original Author: 0xlane
+//
+// This file contains the 'BypassUAC' function, adapted from the original.
+// ----------------------------------------------------------------------
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;

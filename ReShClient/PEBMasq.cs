@@ -1,4 +1,10 @@
-﻿using System;
+﻿// ----------------------------------------------------------------------
+// Original Source: https://github.com/0xlane/BypassUAC/blob/master/BypassUAC_csharp/PEBMasq.cs
+// Original Author: 0xlane
+//
+// This file contains the 'Masquerade PEB' function, adapted from the original.
+// ----------------------------------------------------------------------
+using System;
 using System.IO;
 using System.Text;
 using System.Diagnostics;

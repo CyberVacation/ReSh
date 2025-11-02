@@ -11,7 +11,7 @@ namespace ReShCaller
 {
     public static class ReShCaller
     {
-        private static RSCallerClient _client = new RSCallerClient("139.9.185.182", 65432);
+        private static RSCallerClient _client = new RSCallerClient("127.0.0.1", 65432);
         public static ConcurrentDictionary<Guid, ClientInfo> Clients { get; set; } = new ConcurrentDictionary<Guid, ClientInfo>();
         public static Guid SelectedClientId { get; set; }
         public static bool IsConnected { get; set; }

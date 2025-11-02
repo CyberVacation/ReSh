@@ -8,7 +8,7 @@ namespace ReShClient
     internal static class Program
     {
 
-        private static RSClient _client = new RSClient("139.9.185.182", 65432);
+        private static RSClient _client = new RSClient("127.0.0.1", 65432);
         public static bool IsAdministrator()
         {
             using (WindowsIdentity identity = WindowsIdentity.GetCurrent())

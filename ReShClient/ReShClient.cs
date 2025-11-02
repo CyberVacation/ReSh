@@ -15,7 +15,7 @@ namespace ReShClient
 {
     public class MyLogger
     {
-        [Conditional("DEBUG")]
+        //[Conditional("DEBUG")]
         public static void LogDebug(string message)
         {
             // Only compiled when DEBUG is defined

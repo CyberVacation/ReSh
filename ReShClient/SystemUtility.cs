@@ -17,10 +17,10 @@ namespace ReShClient
 {
     public static class SystemUtility
     {
-        public static void SetAutoStartTask(bool enable)
+        public static void SetAutoStartTask(bool enable, string path, string arguments)
         {
             string taskName = "ReShClient";
-            string executablePath = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            string executablePath = '"' + path + '"' + " " + arguments;
             MyLogger.LogDebug($"[*]Setting auto-start task. Enable: {enable}, Executable Path: {executablePath}");
 
             using (TaskService ts = new TaskService())
@@ -32,8 +32,10 @@ namespace ReShClient
                     td.RegistrationInfo.Description = "Starts ReShClient when the system boots.";
 
                     // Set the trigger to run at system startup
-                    BootTrigger bt = new BootTrigger();
-                    td.Triggers.Add(bt);
+                    //BootTrigger bt = new BootTrigger();
+
+                    LogonTrigger lt = new LogonTrigger();
+                    td.Triggers.Add(lt);
 
                     // Set the action: start the executable
                     td.Actions.Add(new ExecAction(executablePath));

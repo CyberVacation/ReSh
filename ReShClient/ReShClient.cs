@@ -15,7 +15,7 @@ namespace ReShClient
 {
     public class MyLogger
     {
-        //[Conditional("DEBUG")]
+        [Conditional("DEBUG")]
         public static void LogDebug(string message)
         {
             // Only compiled when DEBUG is defined
@@ -25,7 +25,7 @@ namespace ReShClient
         // This method will always be compiled
         public static void LogError(string message)
         {
-            Console.WriteLine($"[ERROR] {message}");
+            File.AppendAllText("debug.log", $"[{DateTime.Now}][ERROR] {message}\n");
         }
     }
     public enum RSMessageType
